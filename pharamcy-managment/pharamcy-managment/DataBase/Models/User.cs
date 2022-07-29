@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pharamcy_managment.DataBase.Repostoriy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,9 @@ namespace pharamcy_managment.DataBase.Models
         public string Name { get; set; }        
         public string LastName { get; set; }
         public string Fin { get; set; }
-        public User(int id,string name,string lastName,string fin)
+        public User(string name,string lastName,string fin)
         {
-            Id = id;
+            Id = UserRepo.IdCounter;
             Name = name;
             LastName = lastName;
             Fin = fin;
